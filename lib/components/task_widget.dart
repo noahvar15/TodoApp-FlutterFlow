@@ -85,7 +85,7 @@ class _TaskWidgetState extends State<TaskWidget> {
                     width: 2,
                     color: FlutterFlowTheme.of(context).alternate,
                   ),
-                  activeColor: FlutterFlowTheme.of(context).primary,
+                  activeColor: FlutterFlowTheme.of(context).secondary,
                   checkColor: FlutterFlowTheme.of(context).info,
                 ),
               ),
