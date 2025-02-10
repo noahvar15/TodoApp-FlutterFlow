@@ -1,0 +1,55 @@
+{
+  "$id": "https://example.com/firestore/todoapp.users.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Users Collection Schema",
+  "description": "Schema describing the structure of the Firestore 'users' collection for a ToDo app.",
+  "type": "object",
+
+  "patternProperties": {
+    "^[A-Za-z0-9_-]+$": {
+      "type": "object",
+      "description": "A single user document in the Firestore 'users' collection.",
+      "properties": {
+        "birthdate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "A timestamp representing the user's birthdate."
+        },
+        "created_time": {
+          "type": "string",
+          "format": "date-time",
+          "description": "A timestamp representing when the user account was created."
+        },
+        "display_name": {
+          "type": "string",
+          "description": "The display name of the user."
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "The user's email address."
+        },
+        "photo_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL to the user's profile photo."
+        },
+        "uid": {
+          "type": "string",
+          "description": "Unique identifier of the user."
+        }
+      },
+      "required": [
+        "birthdate",
+        "created_time",
+        "display_name",
+        "email",
+        "photo_url",
+        "uid"
+      ],
+      "additionalProperties": false
+    }
+  },
+
+  "additionalProperties": false
+}
