@@ -228,7 +228,7 @@ class ThemeTypography extends Typography {
   String get labelLargeFamily => 'Inter';
   TextStyle get labelLarge => GoogleFonts.getFont(
         'Inter',
-        color: const Color(0x4D14181B),
+        color: Color(0x4D14181B),
         fontWeight: FontWeight.normal,
         fontSize: 18.0,
         fontStyle: FontStyle.normal,
